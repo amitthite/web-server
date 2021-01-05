@@ -22,7 +22,7 @@ request(options, (error, {body} ) => {
 			bodyString = JSON.parse(body)
 			bodyString.main.temp = bodyString.main.temp - 273
 			bodyString.main.feels_like = bodyString.main.feels_like - 273
-			callback(undefined, ' It is currently ' + bodyString.main.temp + ' degress out. It feels like ' + bodyString.main.feels_like + ' degrees.')
+			callback(undefined, 'AMIT IS Gr8 :  It is currently ' + bodyString.main.temp + ' degress out. It feels like ' + bodyString.main.feels_like + ' degrees.')
 		}
 	}
 )
