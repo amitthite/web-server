@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent=''
     console.log(location)
 
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('http://webserver-env-1.eba-mj4p2bxg.us-east-1.elasticbeanstalk.com/weather?address='+location).then((response) => {
 
         response.json().then((data) => {
             if (data.error) {
