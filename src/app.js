@@ -50,33 +50,19 @@ app.get('/weather', (req, res) => {
     } else {
         geocode(req.query.address, (error, { latitude, longitude, location }) => {
             if (error) {
-                return console.log(error)
+                return res.send({error: error})
             }
-            console.log('Amit log: lattitude = ' + latitude)
-            console.log('Amit log: longitude = ' + longitude)
-            console.log('Amit log: location = ' + location)
-            // forecast(latitude, longitude, (error, forecastData) => {
-            //     if (error) {
-            //         return console.log(error)
-            //     }
-            //     res.send({
-            //         forecast: forecastData,
-            //         location: location,
-            //         address: req.query.address
-            //     })
-            //     // console.log(location)
-            //     // console.log(forecastData)
-            // })
-        })
-        forecast2(req.query.address, (error, forecastData) => {
+            forecast2(req.query.address, (error, forecastData) => {
             if (error) {
                 return console.log(error)
             }
-            console.log('Amit API: lattitude = ' + forecastData)
-            res.send({
-                forecast: forecastData,
-                address: req.query.address
+                console.log('Amit API: lattitude = ' + forecastData)
+                res.send({
+                    forecast: forecastData,
+                    address: req.query.address,
+                    location: location
                 })
+            })
         })
     
 
