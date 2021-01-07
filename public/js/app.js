@@ -4,6 +4,9 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+// const port = process.env.port || 3000
+// const applicationUrl = process.env.url || 'http://localhost:'+port
+// console.log('port is'+port+'and url is :'+ applicationUrl)    
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
