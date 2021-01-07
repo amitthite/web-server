@@ -1,3 +1,4 @@
+$1
 git add .
-git commit -m "auto commit Amit"
+git commit -m "$1"
 git push origin main
