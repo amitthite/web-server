@@ -8,11 +8,11 @@ const messageTwo = document.querySelector('#message-2')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value
-    messageOne.textContent='Loading...'
+    messageOne.textContent='Loading....'
     messageTwo.textContent=''
     console.log(location)
 
-    fetch('http://webserver-env-1.eba-mj4p2bxg.us-east-1.elasticbeanstalk.com/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
 
         response.json().then((data) => {
             if (data.error) {
