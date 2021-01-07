@@ -104,10 +104,5 @@ app.get('*', (req, res) => {
 })
 const port = process.env.port || 3000
 app.listen(port, () => {
-<<<<<<< HEAD
-    console.log('Server is up on port' + port)
+    console.log('Server is up on port'+ port)
 })
-=======
-    console.log('Server is up on port 3000.')
-})
->>>>>>> 159de80b62ad5b2bc6ae897303b6eb69ad195e69
