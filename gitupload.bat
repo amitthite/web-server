@@ -1,4 +1,6 @@
-$1
+
+echo off
+set arg1=%1
 git add .
-git commit -m "$1"
+git commit -m %arg1%
 git push origin main
